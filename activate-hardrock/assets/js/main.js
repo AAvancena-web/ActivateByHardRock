@@ -144,36 +144,6 @@
 		counters.forEach(function (el) { co.observe(el); });
 	}
 
-	/* ---------- Challenge strip: buttons + drag to scroll ---------- */
-	var strip = document.querySelector('[data-strip]');
-	if (strip) {
-		document.querySelectorAll('[data-slide]').forEach(function (btn) {
-			btn.addEventListener('click', function () {
-				var item = strip.querySelector('.strip__item');
-				var w = item ? item.getBoundingClientRect().width + 20 : 400;
-				strip.scrollBy({ left: w * parseInt(btn.getAttribute('data-slide'), 10), behavior: 'smooth' });
-			});
-		});
-		var down = false, startX = 0, startScroll = 0, moved = false;
-		strip.addEventListener('pointerdown', function (e) {
-			if (e.pointerType !== 'mouse') return;
-			down = true; moved = false; startX = e.clientX; startScroll = strip.scrollLeft;
-			strip.classList.add('is-dragging');
-		});
-		window.addEventListener('pointermove', function (e) {
-			if (!down) return;
-			var dx = e.clientX - startX;
-			if (Math.abs(dx) > 4) moved = true;
-			strip.scrollLeft = startScroll - dx;
-		});
-		window.addEventListener('pointerup', function () {
-			if (!down) return;
-			down = false;
-			strip.classList.remove('is-dragging');
-		});
-		strip.addEventListener('click', function (e) { if (moved) e.preventDefault(); }, true);
-	}
-
 	/* ---------- Video: load Vimeo on demand ---------- */
 	document.querySelectorAll('[data-video]').forEach(function (btn) {
 		btn.addEventListener('click', function () {
