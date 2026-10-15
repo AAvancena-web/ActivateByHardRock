@@ -128,3 +128,18 @@
 .lp-split__col .lp-more__inner { padding-top: 16px; }
 .lp-why-card .lp-more__inner { padding-top: 12px; }
 .lp-why-card .lp-more p + p, .lp-why-card p + .lp-more { margin-top: 0; }
+
+/* ---------- Why Climbing (two columns) ---------- */
+.lp-confidence { display: grid; grid-template-columns: 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+@media (min-width: 1000px) { .lp-confidence { grid-template-columns: 1fr 1fr; } }
+.lp-confidence__content .lp-prose { margin-top: 24px; }
+.lp-benefits-panel { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(28px, 3.2vw, 48px); box-shadow: var(--shadow); overflow: hidden; }
+.lp-benefits-panel::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: linear-gradient(90deg, var(--sky), var(--orange)); }
+.lp-benefits-panel__title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.6rem, 2.3vw, 2.1rem); line-height: 1.05; color: var(--ink); margin-bottom: 20px; }
+.lp-benefit-list { counter-reset: none; }
+.lp-benefit { display: flex; align-items: center; gap: 16px; padding: 15px 0; font-weight: 700; font-size: 1.02rem; color: var(--text); border-top: 1px solid var(--line); }
+.lp-benefit:first-child { border-top: 0; }
+.lp-benefit__icon { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(145deg, rgba(95, 203, 239, 0.2), rgba(255, 159, 28, 0.16)); color: var(--sky-600); transition: background 0.3s, color 0.3s, transform 0.4s var(--ease); }
+.lp-benefit__icon .icon { width: 21px; height: 21px; }
+.lp-benefit:hover .lp-benefit__icon { background: var(--night); color: var(--sky); transform: scale(1.08); }
+@media (max-width: 999px) { .lp-benefits-panel { order: 2; } }
