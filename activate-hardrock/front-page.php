@@ -184,11 +184,9 @@ $challenges = array(
 ?>
 <section class="challenges section" aria-labelledby="challenges-title">
 	<div class="container">
-		<div class="section-head section-head--split reveal">
-			<div>
-				<?php abh_eyebrow( 'Inside the Arena' ); ?>
-				<h2 id="challenges-title" class="h2">30+ walls. <em>Zero</em> boring days.</h2>
-			</div>
+		<div class="section-head section-head--center reveal">
+			<?php abh_eyebrow( 'Inside the Arena' ); ?>
+			<h2 id="challenges-title" class="h2">30+ walls. <em>Zero</em> boring days.</h2>
 			<p class="lead">Every wall is a different puzzle. Here are a few of our favourites.</p>
 		</div>
 		<div class="challenge-grid">
