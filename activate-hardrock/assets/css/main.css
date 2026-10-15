@@ -479,39 +479,20 @@ body.menu-open { overflow: hidden; }
 .svc-card:hover .svc-card__more .icon { transform: translate(3px, -3px); }
 
 /* ==========================================================================
-   Challenges strip
+   Challenges grid
    ========================================================================== */
-.challenges { padding-bottom: calc(var(--section-y) * 0.8); }
 .challenges .section-head { margin-bottom: 44px; }
-.challenges__nav { display: flex; flex-direction: column; gap: 20px; }
-@media (min-width: 900px) { .challenges__nav { align-items: flex-end; text-align: right; } }
-.slider-btns { display: flex; gap: 10px; }
-.slider-btn {
-	width: 54px; height: 54px; border-radius: 50%; border: 0; background: var(--night); color: #fff;
-	display: grid; place-items: center; transition: background 0.3s, transform 0.3s var(--ease);
+.challenge-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 768px) { .challenge-grid { gap: 20px; } }
+@media (min-width: 1024px) { .challenge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.challenge-card { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--sand-2); }
+.challenge-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+.challenge-card:hover img { transform: scale(1.06); }
+.challenge-card figcaption {
+	position: absolute; left: 10px; bottom: 10px; padding: 6px 11px; border-radius: 999px;
+	background: #fff; color: var(--ink); font-weight: 800; font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase;
 }
-.slider-btn:first-child .icon { transform: rotate(180deg); }
-.slider-btn:hover { background: var(--orange); color: var(--ink); transform: scale(1.06); }
-.strip {
-	display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
-	--strip-pad: max(var(--gutter), calc((100% - 1440px) / 2 + var(--gutter)));
-	padding: 6px var(--strip-pad) 24px;
-	scroll-padding-inline: var(--strip-pad);
-	scrollbar-width: none; cursor: grab;
-}
-@media (min-width: 1920px) { .strip { --strip-pad: calc((100% - 1880px) / 2 + var(--gutter)); } }
-.strip::-webkit-scrollbar { display: none; }
-.strip.is-dragging { cursor: grabbing; scroll-snap-type: none; }
-.strip__item {
-	position: relative; flex: none; width: clamp(260px, 26vw, 420px); aspect-ratio: 4 / 3;
-	border-radius: var(--radius); overflow: hidden; scroll-snap-align: start; box-shadow: var(--shadow);
-}
-.strip__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); pointer-events: none; }
-.strip__item:hover img { transform: scale(1.06); }
-.strip__item figcaption {
-	position: absolute; left: 14px; bottom: 14px; padding: 8px 14px; border-radius: 999px;
-	background: #fff; color: var(--ink); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase;
-}
+@media (min-width: 768px) { .challenge-card figcaption { left: 14px; bottom: 14px; padding: 8px 14px; font-size: 0.85rem; } }
 
 /* ==========================================================================
    Feature (parties)
