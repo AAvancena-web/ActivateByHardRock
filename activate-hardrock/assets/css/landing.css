@@ -110,3 +110,21 @@
 .abh-landing .faq__intro .h2 { font-size: clamp(2.2rem, 3.6vw, 3.4rem); margin-bottom: 28px; }
 .abh-landing .accordion__body p + p { margin-top: 12px; }
 .abh-landing .cta-band__content p + p { margin-top: 10px; }
+
+/* ---------- Read more toggle ---------- */
+.lp-more { display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.5s var(--ease), opacity 0.4s; }
+.lp-more > .lp-more__inner { overflow: hidden; min-height: 0; }
+.lp-more.is-collapsed { grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows 0.5s var(--ease), opacity 0.3s, visibility 0s 0.5s; }
+.lp-more__inner > * + * { margin-top: 16px; }
+.lp-more__inner .checklist { margin-top: 18px; }
+.lp-more__btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; padding: 0; background: none; border: 0; font: inherit; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sky-600); cursor: pointer; }
+.lp-more__btn:hover { color: var(--orange-600); }
+.lp-more__btn .icon { width: 18px; height: 18px; transition: transform 0.4s var(--ease); }
+.lp-more__btn[aria-expanded="true"] .icon { transform: rotate(180deg); }
+.section--dark .lp-more__btn { color: var(--sky); }
+.section--dark .lp-more__btn:hover { color: var(--orange); }
+.lp-prose .lp-more__btn { justify-self: start; margin-top: 0; }
+.lp-split__col .lp-more p { margin-top: 0; }
+.lp-split__col .lp-more__inner { padding-top: 16px; }
+.lp-why-card .lp-more__inner { padding-top: 12px; }
+.lp-why-card .lp-more p + p, .lp-why-card p + .lp-more { margin-top: 0; }
