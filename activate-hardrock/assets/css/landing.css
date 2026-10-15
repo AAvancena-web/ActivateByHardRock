@@ -224,3 +224,14 @@
 .lp-help__safety-text strong { display: block; font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: 1.4rem; color: #fff; margin-bottom: 4px; }
 .lp-help__safety-text p { color: var(--muted-light); line-height: 1.65; }
 @media (max-width: 699px) { .lp-help__safety { text-align: center; border-left: 0; border-top: 6px solid var(--orange); } .lp-help__safety .btn { width: 100%; } }
+
+/* Why choose: centred cards */
+.lp-why-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+/* ---------- Responsive refinements ---------- */
+@media (min-width: 700px) and (max-width: 859px) { .lp-why-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1099px) {
+	.lp-help__safety { flex-direction: column; text-align: center; border-left: 0; border-top: 6px solid var(--orange); }
+	.lp-help__safety-text { flex: none; max-width: 640px; }
+}
+@media (min-width: 700px) and (max-width: 959px) { .lp-zz__media { max-width: 640px; margin-inline: auto; width: 100%; } }
