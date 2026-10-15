@@ -164,3 +164,17 @@
 .lp-zz__content p { color: #c9d4de; line-height: 1.75; margin-top: 16px; }
 .lp-zz__content strong { color: #fff; }
 .lp-zz__content .btn-row { margin-top: 32px; }
+
+/* ---------- Party food (single centred column) ---------- */
+.lp-food { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.lp-food__icon { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: var(--ink); margin-bottom: 18px; box-shadow: var(--shadow); }
+.lp-food__icon .icon { width: 28px; height: 28px; }
+.lp-food .h2 { margin-top: 18px; }
+.lp-food .lp-prose { justify-items: center; max-width: 720px; }
+.lp-food .lp-chips { justify-content: center; margin: 22px 0 8px; }
+.lp-food .lp-more { width: 100%; }
+.lp-food .lp-more__inner .lp-prose { margin: 18px auto 0; }
+.lp-food .lp-more__btn { align-self: center; margin-top: 18px; }
+.lp-bring { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 26px; margin-top: 18px; }
+.lp-bring li { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); }
+.lp-bring .icon { width: 26px; height: 26px; padding: 5px; border-radius: 50%; background: var(--sky); color: var(--ink); stroke-width: 2.6; }
