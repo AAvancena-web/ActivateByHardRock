@@ -189,22 +189,19 @@ $challenges = array(
 				<?php abh_eyebrow( 'Inside the Arena' ); ?>
 				<h2 id="challenges-title" class="h2">30+ walls. <em>Zero</em> boring days.</h2>
 			</div>
-			<div class="challenges__nav">
-				<p class="lead">Every wall is a different puzzle. Swipe through a few of our favourites.</p>
-				<div class="slider-btns">
-					<button type="button" class="slider-btn" data-slide="-1" aria-label="Previous"><?php echo abh_icon( 'arrow' ); // phpcs:ignore ?></button>
-					<button type="button" class="slider-btn" data-slide="1" aria-label="Next"><?php echo abh_icon( 'arrow' ); // phpcs:ignore ?></button>
-				</div>
-			</div>
+			<p class="lead">Every wall is a different puzzle. Here are a few of our favourites.</p>
 		</div>
-	</div>
-	<div class="strip" data-strip tabindex="0" aria-label="Climbing challenges gallery">
-		<?php foreach ( $challenges as $img => $label ) : ?>
-			<figure class="strip__item">
-				<img src="<?php echo esc_url( abh_img( $img ) ); ?>" alt="<?php echo esc_attr( $label ); ?> climbing challenge" loading="lazy">
-				<figcaption><?php echo esc_html( $label ); ?></figcaption>
-			</figure>
-		<?php endforeach; ?>
+		<div class="challenge-grid">
+			<?php
+			$n = 0;
+			foreach ( $challenges as $img => $label ) :
+				?>
+				<figure class="challenge-card reveal" data-delay="<?php echo esc_attr( $n++ % 4 ); ?>">
+					<img src="<?php echo esc_url( abh_img( $img ) ); ?>" alt="<?php echo esc_attr( $label ); ?> climbing challenge" loading="lazy">
+					<figcaption><?php echo esc_html( $label ); ?></figcaption>
+				</figure>
+			<?php endforeach; ?>
+		</div>
 	</div>
 </section>
 
