@@ -827,6 +827,12 @@ body.menu-open { overflow: hidden; }
 .nav__list > li > a, .mobile-nav__list > li > a { text-transform: uppercase; letter-spacing: 0.06em; font-weight: 800; }
 .activities .bento + .btn-row { margin-top: 48px; }
 
+/* Intro stats: cards size to their content instead of stretching */
+.stats { grid-template-columns: repeat(3, auto); justify-content: start; }
+.stat { padding: 18px 26px 18px 22px; }
+@media (max-width: 767px) { .stats { justify-content: center; } }
+@media (max-width: 479px) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } .stat { padding: 16px 10px; } }
+
 /* =========================================================================
    Mobile: centre-align content (forms, accordions and icon lists stay left)
    ========================================================================= */
