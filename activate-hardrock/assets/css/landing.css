@@ -235,3 +235,10 @@
 	.lp-help__safety-text { flex: none; max-width: 640px; }
 }
 @media (min-width: 700px) and (max-width: 959px) { .lp-zz__media { max-width: 640px; margin-inline: auto; width: 100%; } }
+
+/* ---------- Final CTA: stacked text + buttons ---------- */
+.abh-landing .cta-band__inner { grid-template-columns: 1fr; align-items: start; }
+.abh-landing .cta-band__content { max-width: 720px; }
+.abh-landing .cta-band__title { font-size: clamp(2.4rem, 4.2vw, 4rem); }
+.abh-landing .cta-band__actions { margin-top: 8px; }
+@media (max-width: 599px) { .abh-landing .cta-band__actions .btn { width: 100%; } }
