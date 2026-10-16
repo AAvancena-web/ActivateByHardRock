@@ -366,3 +366,13 @@
 .lp-step:nth-child(4n+2) .lp-step__num { background: #fff; }
 .lp-step:nth-child(4n+3) .lp-step__num { background: #ff9fc0; }
 .lp-step:nth-child(4n+4) .lp-step__num { background: #9fe1f7; }
+
+/* Landing hero: dark overlay on the photo (instead of the rainbow wash) for readability */
+.lp-hero { background: #0b0f1a; }
+.lp-hero::before {
+	background:
+		linear-gradient(90deg, rgba(8, 10, 20, 0.88) 0%, rgba(8, 10, 20, 0.78) 45%, rgba(8, 10, 20, 0.55) 75%, rgba(8, 10, 20, 0.6) 100%),
+		linear-gradient(0deg, rgba(8, 10, 20, 0.85) 0%, rgba(8, 10, 20, 0) 40%);
+}
+.lp-hero .hero__glow { background: radial-gradient(circle, rgba(255, 210, 63, 0.12), rgba(255, 210, 63, 0) 65%); }
+.lp-hero .lp-why { background: rgba(255, 255, 255, 0.07); }
