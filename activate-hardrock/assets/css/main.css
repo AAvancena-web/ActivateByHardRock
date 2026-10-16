@@ -1103,3 +1103,6 @@ body.menu-open { overflow: hidden; }
 /* Dropdowns sit above the header rainbow stripe */
 .site-header::after { z-index: 1; pointer-events: none; }
 .nav .sub-menu { z-index: 20; }
+
+/* Body text on light backgrounds: near-black for readability */
+:root { --muted: #1f2430; }
