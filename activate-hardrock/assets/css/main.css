@@ -1070,3 +1070,9 @@ body.menu-open { overflow: hidden; }
 .step:nth-child(3n+1) .step__icon { background: var(--sun); color: var(--ink); }
 .step:nth-child(3n+3) .step__icon { background: #fff; color: var(--g); }
 .hero .text-gradient, .cta-band__title span, .section--dark .h2 em { background: none; -webkit-background-clip: border-box; background-clip: border-box; color: #ffe14d; animation: none; text-shadow: 0 2px 18px rgba(60, 10, 90, 0.35); }
+
+/* Contact info cards: icon on top, text below, centred */
+.info-list li { flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 26px 20px; }
+.info-list div > a, .info-list div > span { word-break: normal; overflow-wrap: anywhere; }
+.info-list a[href^="mailto"] { font-size: 0.92rem; }
+.info-list, .info-list li { text-align: center; }
