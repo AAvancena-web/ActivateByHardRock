@@ -822,3 +822,7 @@ body.menu-open { overflow: hidden; }
 .reviews__score { display: flex; align-items: center; gap: 10px; justify-content: center; }
 .reviews__score strong { color: #fff; font-size: 1.4rem; }
 .reviews__cta { display: flex; justify-content: center; margin-top: clamp(32px, 4vw, 48px); }
+
+/* Header navigation: uppercase menu items */
+.nav__list > li > a, .mobile-nav__list > li > a { text-transform: uppercase; letter-spacing: 0.06em; font-weight: 800; }
+.activities .bento + .btn-row { margin-top: 48px; }
