@@ -310,3 +310,59 @@
 @media (max-width: 599px) { .abh-landing .lp-checklist--light { column-gap: 20px; } .abh-landing .lp-checklist--light li { font-size: 0.84rem; gap: 8px; } }
 @media (max-width: 440px) { .abh-landing .lp-checklist--light { grid-template-columns: max-content; } .abh-landing .lp-checklist--light li { font-size: 0.9rem; } }
 @media (min-width: 1024px) and (max-width: 1099px) { .abh-landing .lp-checklist--light { column-gap: 24px; } }
+
+/* =========================================================================
+   RAINBOW THEME for landing-page components (uses tokens from main.css)
+   ========================================================================= */
+/* Packages: warm and cool ends of the rainbow */
+.lp-package--featured:nth-child(1) { background: linear-gradient(140deg, var(--r) 0%, var(--o) 100%); }
+.lp-package--featured:nth-child(2) { background: linear-gradient(140deg, var(--b) 0%, var(--v) 100%); }
+.lp-package--featured .lp-package__icon { background: #fff; }
+.lp-package--featured:nth-child(1) .lp-package__icon { color: var(--r); }
+.lp-package--featured:nth-child(2) .lp-package__icon { color: var(--b); }
+.lp-package--featured .lp-package__age { background: var(--sun); }
+.lp-package--featured .lp-package__text { color: rgba(255, 255, 255, 0.9); }
+.lp-package--featured .lp-package__inc { color: var(--sun); border-color: rgba(255, 255, 255, 0.3); }
+.lp-package--featured .checklist .icon { background: #fff; color: var(--ink); }
+
+/* Party menu board + safety banner */
+.lp-menu { background: var(--rainbow-deep); }
+.lp-menu::after { border-color: rgba(255, 255, 255, 0.3); }
+.lp-menu__kicker { color: var(--sun); }
+.lp-menu__list li { border-bottom-color: rgba(255, 255, 255, 0.3); color: #fff; }
+.lp-menu__list li::before { background: var(--sun); box-shadow: 0 0 0 4px rgba(255, 225, 77, 0.25); }
+.lp-menu__list li:hover { color: var(--sun); }
+.lp-help__safety { background: var(--rainbow-deep); border-left-color: var(--sun); }
+.lp-help__safety-icon { background: var(--sun); }
+@media (max-width: 1099px) { .lp-help__safety { border-top-color: var(--sun); } }
+
+/* Icon colour rotation */
+.lp-help__card:nth-child(1) .lp-help__icon { background: var(--r); color: #fff; box-shadow: 0 0 0 8px rgba(220, 38, 38, 0.12); }
+.lp-help__card:nth-child(2) .lp-help__icon { background: var(--g); color: #fff; box-shadow: 0 0 0 8px rgba(21, 128, 61, 0.12); }
+.lp-help__card:nth-child(3) .lp-help__icon { background: var(--b); color: #fff; box-shadow: 0 0 0 8px rgba(29, 78, 216, 0.12); }
+.lp-help__num { -webkit-text-stroke-color: rgba(126, 34, 206, 0.25); }
+.lp-why-card:nth-child(1) .lp-why-card__icon { background: var(--r); color: #fff; }
+.lp-why-card:nth-child(2) .lp-why-card__icon { background: var(--o); color: #fff; }
+.lp-why-card:nth-child(3) .lp-why-card__icon { background: var(--g); color: #fff; }
+.lp-why-card:nth-child(4) .lp-why-card__icon { background: var(--v); color: #fff; }
+.lp-bring li:nth-child(1) .lp-bring__icon { background: var(--pink); color: #fff; }
+.lp-bring li:nth-child(2) .lp-bring__icon { background: var(--g); color: #fff; }
+.lp-bring li:nth-child(3) .lp-bring__icon { background: var(--b); color: #fff; }
+.lp-benefit:nth-child(6n+1) .lp-benefit__icon { background: #fde2e2; color: var(--r); }
+.lp-benefit:nth-child(6n+2) .lp-benefit__icon { background: #ffe8d6; color: var(--o); }
+.lp-benefit:nth-child(6n+3) .lp-benefit__icon { background: #fdf3c7; color: var(--y); }
+.lp-benefit:nth-child(6n+4) .lp-benefit__icon { background: #dcf5e3; color: var(--g); }
+.lp-benefit:nth-child(6n+5) .lp-benefit__icon { background: #dde7ff; color: var(--b); }
+.lp-benefit:nth-child(6n+6) .lp-benefit__icon { background: #efe0ff; color: var(--v); }
+.lp-diet__icon { background: #dcf5e3; color: var(--g); }
+.lp-diet__tags li { color: var(--v); }
+.lp-food__icon { background: var(--rainbow-bright); color: #fff; }
+.lp-split__icon, .lp-zz__badge .icon { background: var(--sun); color: var(--ink); }
+.lp-step__num { background: var(--rainbow-bright); color: var(--ink); }
+.lp-checklist--light .icon { background: var(--sun); }
+.lp-note .icon, .lp-package__inc { color: var(--v); }
+.lp-food__icon { background: var(--pink); }
+.lp-step__num { background: var(--sun); color: var(--ink); }
+.lp-step:nth-child(4n+2) .lp-step__num { background: #fff; }
+.lp-step:nth-child(4n+3) .lp-step__num { background: #ff9fc0; }
+.lp-step:nth-child(4n+4) .lp-step__num { background: #9fe1f7; }
