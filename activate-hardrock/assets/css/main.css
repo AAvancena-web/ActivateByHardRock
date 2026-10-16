@@ -1012,3 +1012,61 @@ body.menu-open { overflow: hidden; }
 .to-top { background: var(--night); }
 .mobile-menu__panel { background: var(--night); }
 .mobile-menu__close { background: rgba(255, 255, 255, 0.15); }
+
+/* =========================================================================
+   RAINBOW THEME (overrides the blue theme above)
+   Deep rainbow hues carry white text (all 4.5:1+); bright rainbow is used
+   for stripes and accents. Each colour section takes its own hue so the
+   page reads as a rainbow while scrolling.
+   ========================================================================= */
+:root {
+	--r: #dc2626; --o: #c2410c; --y: #a16207; --g: #15803d; --t: #0f766e; --b: #1d4ed8; --i: #4338ca; --v: #7e22ce;
+	--rainbow-deep: linear-gradient(100deg, var(--r) 0%, var(--o) 18%, var(--y) 33%, var(--g) 50%, var(--b) 68%, var(--i) 84%, var(--v) 100%);
+	--rainbow-bright: linear-gradient(90deg, #ff3b30, #ff9500, #ffcc00, #34c759, #00b4d8, #5856d6, #af52de);
+	--night: #6d28d9; --night-2: #7c3aed; --night-3: #8b5cf6;
+	--deep: #4c1d95;
+}
+
+/* Rainbow stripes */
+.site-header { background: var(--rainbow-deep); }
+.site-header.is-scrolled { background: var(--rainbow-deep); }
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--rainbow-bright); }
+.scroll-progress span { background: #fff; }
+.topbar { background: var(--sun); }
+
+/* Hero wash over the video */
+.hero { background: var(--v); }
+.hero::before {
+	background:
+		linear-gradient(115deg, rgba(220, 38, 38, 0.88) 0%, rgba(194, 65, 12, 0.8) 22%, rgba(161, 98, 7, 0.62) 40%, rgba(21, 128, 61, 0.45) 58%, rgba(29, 78, 216, 0.4) 78%, rgba(126, 34, 206, 0.5) 100%),
+		linear-gradient(0deg, rgba(76, 29, 149, 0.6) 0%, rgba(76, 29, 149, 0) 35%);
+}
+.hero__glow { background: radial-gradient(circle, rgba(255, 204, 0, 0.3), rgba(255, 204, 0, 0) 65%); }
+
+/* Colour sections: one hue family each */
+.section--dark { background: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2.5px) 0 0 / 34px 34px, var(--rainbow-deep); }
+.activities.section--dark { background: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2.5px) 0 0 / 34px 34px, linear-gradient(135deg, var(--v) 0%, var(--i) 100%); }
+.steps.section--dark { background: linear-gradient(135deg, var(--g) 0%, var(--t) 100%); }
+.steps::after { background: radial-gradient(ellipse at center, rgba(15, 118, 110, 0.3), rgba(21, 128, 61, 0.9) 75%); }
+.reviews.section--dark { background: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2.5px) 0 0 / 34px 34px, linear-gradient(135deg, var(--r) 0%, var(--o) 100%); }
+.lp-zz.section--dark { background: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2.5px) 0 0 / 34px 34px, linear-gradient(135deg, var(--b) 0%, var(--i) 100%); }
+.section--dark::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--rainbow-bright); z-index: 1; }
+.activities::before { background: var(--rainbow-bright); width: auto; height: 6px; left: 0; right: 0; top: 0; border-radius: 0; }
+
+/* Headline accents */
+.h2 em { background: linear-gradient(100deg, var(--r), var(--o) 25%, var(--g) 50%, var(--b) 75%, var(--v)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Ticker, cards, CTA band, footer */
+.ticker { background: var(--rainbow-bright); color: var(--ink); }
+.ticker li::after { background: #fff; }
+.svc-card::before { background: linear-gradient(180deg, rgba(76, 29, 149, 0) 25%, rgba(76, 29, 149, 0.55) 55%, rgba(59, 7, 100, 0.95) 100%); }
+.facility::before, .lp-help__card::before, .lp-package--featured::before, .lp-menu::before, .lp-benefits-panel::before { background: var(--rainbow-bright); }
+.cta-band__inner { background: var(--rainbow-deep); }
+.cta-band__inner::before { background: linear-gradient(90deg, rgba(126, 34, 206, 0.35) 35%, rgba(126, 34, 206, 0.2) 75%, rgba(126, 34, 206, 0)); }
+.site-footer { background: linear-gradient(135deg, var(--deep) 0%, var(--i) 100%); position: relative; }
+.site-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--rainbow-bright); }
+.intro__badge { background: var(--r); }
+.group-card:nth-child(4n+1) .group-card__icon, .facility:nth-child(4n+1) .facility__icon, .step:nth-child(3n+1) .step__icon { background: var(--b); color: #fff; }
+.step:nth-child(3n+1) .step__icon { background: var(--sun); color: var(--ink); }
+.step:nth-child(3n+3) .step__icon { background: #fff; color: var(--g); }
+.hero .text-gradient, .cta-band__title span, .section--dark .h2 em { background: none; -webkit-background-clip: border-box; background-clip: border-box; color: #ffe14d; animation: none; text-shadow: 0 2px 18px rgba(60, 10, 90, 0.35); }
