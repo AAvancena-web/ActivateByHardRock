@@ -276,12 +276,12 @@
 .abh-landing .lp-hero .field input:not([type="checkbox"]), .abh-landing .lp-hero .field select { min-height: 46px; }
 .lp-menu__list li { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.92rem; font-weight: 700; }
 
-/* "Why families" box (in the left column): one line per item; two columns when the box is wide enough */
+/* "Why families" box: two single-line columns */
 .abh-landing .lp-why { container-type: inline-size; }
-.abh-landing .lp-checklist--light { grid-template-columns: 1fr; gap: 10px 40px; justify-content: start; }
+.abh-landing .lp-checklist--light { grid-template-columns: repeat(2, max-content); gap: 12px 36px; justify-content: start; }
 .abh-landing .lp-checklist--light li { font-size: 0.92rem; align-items: center; white-space: nowrap; }
-@container (max-width: 380px) { .abh-landing .lp-checklist--light li { font-size: 0.8rem; gap: 8px; } }
-@container (min-width: 740px) { .abh-landing .lp-checklist--light { grid-template-columns: repeat(2, max-content); } }
+@container (max-width: 470px) { .abh-landing .lp-checklist--light { column-gap: 20px; } .abh-landing .lp-checklist--light li { font-size: 0.84rem; gap: 8px; } }
+@container (max-width: 340px) { .abh-landing .lp-checklist--light { grid-template-columns: max-content; } .abh-landing .lp-checklist--light li { font-size: 0.9rem; } }
 
 /* =========================================================================
    Mobile: centre-align landing content (forms, FAQ, icon lists stay left)
