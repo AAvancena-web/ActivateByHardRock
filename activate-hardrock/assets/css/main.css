@@ -940,6 +940,7 @@ body.menu-open { overflow: hidden; }
 .hero__video {
 	position: absolute; left: 50%; top: 50%; border: 0; pointer-events: none;
 	width: max(100cqw, 177.78cqh); height: max(100cqh, 56.25cqw);
+	max-width: none; max-height: none;
 	transform: translate(-50%, -50%);
 }
 @media (prefers-reduced-motion: reduce) { .hero__video { display: none; } }
