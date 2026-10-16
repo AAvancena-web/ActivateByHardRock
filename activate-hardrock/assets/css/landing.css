@@ -260,3 +260,6 @@
 .lp-menu__list li { display: flex; align-items: center; gap: 14px; padding: 14px 4px; border: 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.16); border-radius: 0; background: none; font-weight: 600; font-size: 1rem; color: #e8eef4; }
 .lp-menu__list li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255, 159, 28, 0.18); }
 .lp-menu__list li:hover { background: none; border-color: rgba(255, 255, 255, 0.16); color: var(--sky); transform: none; }
+
+/* Hero: let intro text and "Why families" box span the full column */
+.abh-landing .lp-hero .hero__text, .abh-landing .lp-why { max-width: none; }
