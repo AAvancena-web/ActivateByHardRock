@@ -829,7 +829,10 @@ body.menu-open { overflow: hidden; }
 
 /* Intro stats: cards size to their content instead of stretching */
 .stats { grid-template-columns: repeat(3, auto); justify-content: start; }
-.stat { padding: 18px 26px 18px 22px; }
+.stat { padding: 18px 24px; text-align: center; }
+.stat dd { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.74rem; font-weight: 700; }
+@media (min-width: 1280px) { .stat dd { white-space: nowrap; } }
+@media (max-width: 479px) { .stat dd { letter-spacing: 0.03em; font-size: 0.66rem; } }
 @media (max-width: 767px) { .stats { justify-content: center; } }
 @media (max-width: 479px) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); } .stat { padding: 16px 10px; } }
 
