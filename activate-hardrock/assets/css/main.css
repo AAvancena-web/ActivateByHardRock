@@ -1086,3 +1086,14 @@ body.menu-open { overflow: hidden; }
 .footer-bottom { border-top-color: rgba(255, 255, 255, 0.3); }
 .site-footer .socials a { background: rgba(255, 255, 255, 0.18); color: #fff; }
 .site-footer .socials a:hover { background: #fff; color: var(--v); }
+
+/* Contact info cards: small icon beside the label, value below, left-aligned */
+.info-list, .info-list li { text-align: left; }
+.info-list li { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 10px; row-gap: 10px; padding: 22px 24px; }
+.info-list li > div { display: contents; }
+.info-list__icon { width: 32px; height: 32px; border-radius: 10px; }
+.info-list__icon .icon { width: 16px; height: 16px; }
+.info-list small { margin: 0; }
+.info-list div > a, .info-list div > span { grid-column: 1 / -1; }
+@media (max-width: 767px) { .info-list, .info-list li { text-align: left; } }
+.info-list li { align-content: start; }
