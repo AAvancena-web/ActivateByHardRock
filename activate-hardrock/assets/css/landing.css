@@ -275,3 +275,19 @@
 .abh-landing .lp-hero .enquiry__fineprint { margin-top: 10px; }
 .abh-landing .lp-hero .field input:not([type="checkbox"]), .abh-landing .lp-hero .field select { min-height: 46px; }
 .lp-menu__list li { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.92rem; font-weight: 700; }
+
+/* "Why families" strip: full width under the hero, two single-line columns */
+.abh-landing .lp-hero .lp-why { container-type: inline-size; grid-column: 1 / -1; width: 100%; max-width: none; margin: 0; }
+.abh-landing .lp-checklist--light { grid-template-columns: 1fr; gap: 12px 40px; }
+.abh-landing .lp-checklist--light li { font-size: 0.92rem; align-items: center; white-space: nowrap; }
+@container (max-width: 380px) { .abh-landing .lp-checklist--light li { font-size: 0.8rem; gap: 8px; } }
+@container (min-width: 700px) { .abh-landing .lp-checklist--light { grid-template-columns: repeat(2, max-content); justify-content: space-between; } }
+@media (max-width: 1023px) { .abh-landing .lp-hero .lp-why { order: 1; } .abh-landing .lp-hero .hero__form { order: 2; } }
+/* Why strip: compact single row on wide screens */
+.abh-landing .lp-checklist--light { justify-content: start; }
+@container (min-width: 700px) { .abh-landing .lp-checklist--light { justify-content: start; column-gap: 56px; } }
+@media (min-width: 1024px) {
+	.abh-landing .lp-hero .hero__inner { row-gap: 40px; }
+	.abh-landing .lp-hero .lp-why { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 24px 56px; padding: 26px 34px; }
+	.abh-landing .lp-hero .lp-why__title { margin: 0; max-width: 11ch; font-size: 1.6rem; line-height: 1.05; }
+}
