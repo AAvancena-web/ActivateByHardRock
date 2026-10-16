@@ -1099,3 +1099,7 @@ body.menu-open { overflow: hidden; }
 .info-list li { align-content: start; }
 .info-list li { padding: 20px; }
 .info-list a[href^="mailto"] { font-size: 0.88rem; overflow-wrap: normal; }
+
+/* Dropdowns sit above the header rainbow stripe */
+.site-header::after { z-index: 1; pointer-events: none; }
+.nav .sub-menu { z-index: 20; }
