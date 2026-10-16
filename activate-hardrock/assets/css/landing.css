@@ -263,3 +263,15 @@
 
 /* Hero: let intro text and "Why families" box span the full column */
 .abh-landing .lp-hero .hero__text, .abh-landing .lp-why { max-width: none; }
+
+/* ---------- Compact hero form (2 fields per row) ---------- */
+.abh-landing .lp-hero .form-card { padding: clamp(22px, 2.2vw, 32px); }
+.abh-landing .lp-hero .form-card__head { margin-bottom: 16px; }
+.abh-landing .lp-hero .form-card__title { font-size: clamp(1.7rem, 2.1vw, 2.2rem); }
+.abh-landing .lp-hero .enquiry__grid { gap: 10px 12px; margin-bottom: 14px; align-items: end; }
+.abh-landing .lp-hero .field { gap: 4px; }
+.abh-landing .lp-hero .field label { font-size: 0.76rem; }
+.abh-landing .lp-hero .field input:not([type="checkbox"]), .abh-landing .lp-hero .field select, .abh-landing .lp-hero .field textarea { padding-top: 10px; padding-bottom: 10px; }
+.abh-landing .lp-hero .enquiry__fineprint { margin-top: 10px; }
+.abh-landing .lp-hero .field input:not([type="checkbox"]), .abh-landing .lp-hero .field select { min-height: 46px; }
+.lp-menu__list li { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.92rem; font-weight: 700; }
