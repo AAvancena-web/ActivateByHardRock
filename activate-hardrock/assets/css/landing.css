@@ -253,3 +253,10 @@
 	.lp-food__body { text-align: center; }
 }
 @media (min-width: 1024px) { .lp-food__head .h2 { font-size: clamp(2.2rem, 3.6vw, 3.4rem); } }
+
+/* ---------- Party menu as a list ---------- */
+.lp-menu__list { display: grid; grid-template-columns: 1fr; gap: 0 40px; max-width: 640px; margin: 0 auto; text-align: left; }
+@media (min-width: 560px) { .lp-menu__list { grid-template-columns: 1fr 1fr; } }
+.lp-menu__list li { display: flex; align-items: center; gap: 14px; padding: 14px 4px; border: 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.16); border-radius: 0; background: none; font-weight: 600; font-size: 1rem; color: #e8eef4; }
+.lp-menu__list li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px rgba(255, 159, 28, 0.18); }
+.lp-menu__list li:hover { background: none; border-color: rgba(255, 255, 255, 0.16); color: var(--sky); transform: none; }
