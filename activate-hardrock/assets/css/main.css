@@ -1106,3 +1106,25 @@ body.menu-open { overflow: hidden; }
 
 /* Body text on light backgrounds: near-black for readability */
 :root { --muted: #1f2430; }
+
+/* =========================================================================
+   LOGO COLOURS for header, footer and banner overlays
+   (logo: white wordmark, sky #5fcbef / ice #9fe1f7 / teal-blue gem)
+   ========================================================================= */
+:root { --ocean: #0d6690; --ocean-deep: #08465f; --ocean-ink: #062f42; --logo-stripe: linear-gradient(90deg, #9fe1f7, #5fcbef 50%, #2fa6d4); }
+.site-header, .site-header.is-scrolled { background: var(--ocean); }
+.site-header::after { background: var(--logo-stripe); height: 4px; }
+.site-footer { background: var(--ocean-deep); }
+.site-footer::before { background: var(--logo-stripe); }
+.footer-col h3 { color: #9fe1f7; }
+.site-footer .socials a:hover { color: var(--ocean); }
+.mobile-menu__panel { background: var(--ocean-deep); }
+
+/* Homepage video banner: ocean-blue wash in place of the rainbow */
+.hero { background: var(--ocean-deep); }
+.hero::before {
+	background:
+		linear-gradient(90deg, rgba(6, 47, 66, 0.9) 0%, rgba(8, 70, 95, 0.78) 40%, rgba(13, 102, 144, 0.45) 75%, rgba(47, 166, 212, 0.25) 100%),
+		linear-gradient(0deg, rgba(6, 47, 66, 0.8) 0%, rgba(6, 47, 66, 0) 38%);
+}
+.hero__glow { background: radial-gradient(circle, rgba(95, 203, 239, 0.25), rgba(95, 203, 239, 0) 65%); }
