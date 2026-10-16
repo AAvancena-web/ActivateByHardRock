@@ -242,3 +242,14 @@
 .abh-landing .cta-band__title { font-size: clamp(2.4rem, 4.2vw, 4rem); }
 .abh-landing .cta-band__actions { margin-top: 8px; }
 @media (max-width: 599px) { .abh-landing .cta-band__actions .btn { width: 100%; } }
+
+/* ---------- Party food: FAQ-style sticky title (desktop) ---------- */
+.lp-food__body { display: grid; gap: clamp(22px, 2.4vw, 32px); min-width: 0; }
+.lp-food__head .btn { margin-top: 28px; }
+@media (min-width: 1024px) {
+	.lp-food { max-width: none; grid-template-columns: 0.8fr 1.2fr; gap: 96px; align-items: start; text-align: left; }
+	.lp-food__head { position: sticky; top: 120px; align-items: flex-start; }
+	.lp-food__head .h2 { margin-top: 18px; }
+	.lp-food__body { text-align: center; }
+}
+@media (min-width: 1024px) { .lp-food__head .h2 { font-size: clamp(2.2rem, 3.6vw, 3.4rem); } }
