@@ -1097,3 +1097,5 @@ body.menu-open { overflow: hidden; }
 .info-list div > a, .info-list div > span { grid-column: 1 / -1; }
 @media (max-width: 767px) { .info-list, .info-list li { text-align: left; } }
 .info-list li { align-content: start; }
+.info-list li { padding: 20px; }
+.info-list a[href^="mailto"] { font-size: 0.88rem; overflow-wrap: normal; }
