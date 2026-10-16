@@ -282,3 +282,24 @@
 .abh-landing .lp-checklist--light li { font-size: 0.92rem; align-items: center; white-space: nowrap; }
 @container (max-width: 380px) { .abh-landing .lp-checklist--light li { font-size: 0.8rem; gap: 8px; } }
 @container (min-width: 740px) { .abh-landing .lp-checklist--light { grid-template-columns: repeat(2, max-content); } }
+
+/* =========================================================================
+   Mobile: centre-align landing content (forms, FAQ, icon lists stay left)
+   ========================================================================= */
+@media (max-width: 767px) {
+	.lp-crumbs { justify-content: center; }
+	.lp-hero .hero__content, .lp-why, .lp-why__title, .lp-zz__content, .lp-confidence__content,
+	.lp-food__head, .lp-package, .lp-package__inc, .lp-note, .lp-small, .lp-callout { text-align: center; }
+	.lp-food__head { align-items: center; }
+	.lp-package__top { justify-content: center; gap: 14px; }
+	.lp-callout { flex-direction: column; align-items: center; }
+	.lp-confidence__content .lp-prose, .lp-zz__content p { text-align: center; }
+
+	/* Lists keep left-aligned items, centred as a block */
+	.lp-checklist--light, .lp-package__list, .lp-benefit-list, .lp-bring, .lp-menu__list { margin-left: auto; margin-right: auto; }
+	.lp-checklist--light, .lp-package__list { width: fit-content; max-width: 100%; text-align: left; }
+	.lp-benefits-panel { text-align: left; }
+	.lp-benefits-panel__title { text-align: center; }
+	.lp-prose .lp-more__btn, .lp-more__btn { justify-self: center; align-self: center; margin-left: auto; margin-right: auto; }
+	.feature__content .lp-prose { text-align: center; }
+}

@@ -826,3 +826,43 @@ body.menu-open { overflow: hidden; }
 /* Header navigation: uppercase menu items */
 .nav__list > li > a, .mobile-nav__list > li > a { text-transform: uppercase; letter-spacing: 0.06em; font-weight: 800; }
 .activities .bento + .btn-row { margin-top: 48px; }
+
+/* =========================================================================
+   Mobile: centre-align content (forms, accordions and icon lists stay left)
+   ========================================================================= */
+@media (max-width: 767px) {
+	/* Headings, intros, text blocks */
+	.hero__content, .intro__content, .feature__content, .faq__intro,
+	.cta-band__content, .section-head, .section-head--split > *, .contact .section-head,
+	.svc-card__body, .group-card__body, .news-card__body, .step, .facility,
+	.footer-brand, .site-footer .footer-col, .contact__info > p, .video__content { text-align: center; }
+	.section-head--split { justify-items: center; }
+	.section-head--split > :last-child { justify-self: center; }
+	.hero__text, .lead { margin-left: auto; margin-right: auto; }
+
+	/* Button rows and inline groups */
+	.hero__ctas, .btn-row, .cta-band__actions, .socials { justify-content: center; }
+	.faq__intro .btn, .feature__content .btn, .intro__content .btn { margin-left: auto; margin-right: auto; }
+	.svc-card__body, .group-card__body, .news-card__body { align-items: center; }
+	.group-card__icon { margin-left: auto; margin-right: auto; }
+	.eyebrow { margin-left: auto; margin-right: auto; }
+
+	/* Icon lists: keep items left-aligned, centre the list as a block */
+	.checklist, .hero__trust { width: fit-content; max-width: 100%; margin-left: auto; margin-right: auto; text-align: left; }
+	.hero__trust { justify-content: center; }
+	.stats { text-align: center; }
+
+	/* Cards and footer */
+	.pass-card__body { text-align: center; align-items: center; }
+	.pass-card__cta { align-self: center; }
+	.pass-card__icon { left: 50%; transform: translateX(-50%); }
+	.footer-brand, .footer-col { text-align: center; }
+	.footer-brand__logo { display: inline-block; }
+	.footer-brand p { margin-left: auto; margin-right: auto; }
+	.footer-contact { width: fit-content; margin: 0 auto; text-align: left; }
+	.footer-bottom__inner { flex-direction: column; align-items: center; text-align: center; }
+	.footer-bottom ul { justify-content: center; }
+
+	/* Stay left-aligned: forms, accordions, contact detail rows */
+	.form-card, .enquiry, .accordion, .info-list { text-align: left; }
+}
